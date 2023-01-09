@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Traits from "./Traits/traits";
+import Header from "./UIComponents/Header";
+import SideDrawer from "./UIComponents/SideDrawer";
+import css from '../css/CharacterSheet.css';
 
 class CharacterSheet extends Component{
   constructor(props) {
@@ -9,9 +12,12 @@ class CharacterSheet extends Component{
   }
 
   render() {
+    const sideDrawer = <SideDrawer />
     return (
       <div className="CharacterSheet">
-      <Traits />
+
+        <Traits />
+        { sideDrawer }
       </div>
     )
   }
